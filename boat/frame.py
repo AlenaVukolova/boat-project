@@ -1,10 +1,15 @@
 class Frame:
     """Класс корпуса лодки"""   
     def __init__(self, boat_length: float, max_load: float):
-        """Инициализирует корпус с указанными параметрами"""
+        """Инициализирует корпус с указанными параметрами
+
+        Args: 
+            boat_length: длина корпуса лодки в метрах
+            max_load: максимальная нагрузка в килограммах 
+        """
         self.waterproof = True                   # водонепроницаемость лодки
-        self.boat_length = boat_length           # длина корпуса лодки в метрах
-        self.max_load = max_load                 # максимальная нагрузка в килограммах 
+        self.boat_length = boat_length         
+        self.max_load = max_load               
         self.damages = {}                        # словарь повреждений в формате {'location': severity}
         self.total_weight = 0                    # общий вес груза в лодки в килограммах
                   

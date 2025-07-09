@@ -35,7 +35,7 @@ class TestOars:
         assert oars.permissible_weight() is True
         
         # Превышение веса
-        heavy_oars = Oars(1.8, 1.8, 3.0, 3.0)
+        heavy_oars = Oars(1.8, 1.8, 3.5, 3.5)
         assert heavy_oars.permissible_weight() is False
 
     def test_oars_of_suitable_length(self):

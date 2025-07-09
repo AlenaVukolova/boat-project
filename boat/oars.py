@@ -4,11 +4,17 @@ class Oars:
     def __init__(self, first_oar_length: float, second_oar_length : float,\
                  first_oar_weight: float, second_oar_weight : float):
         """Инициализирует весел с указанными параметрами
+
+        Args: 
+            first_oar_length: длина первого весла 
+            second_oar_length: длина второго весла
+            first_oar_weight: вес первого весла
+            second_oar_weight: вес второго весла
         """
-        self.oar1_length = first_oar_length     # длина первого весла 
-        self.oar2_length = second_oar_length    # длина второго весла
-        self.oar1_weight = first_oar_weight     # вес первого весла
-        self.oar2_weight = second_oar_weight    # вес второго весла
+        self.oar1_length = first_oar_length     
+        self.oar2_length = second_oar_length    
+        self.oar1_weight = first_oar_weight     
+        self.oar2_weight = second_oar_weight    
         self.maximum_weight_of_one_oar = 3      # максимально допустимый вес одного весла в килограммах
         self.maximum_length = 2                 # максимально допустимая длина одного весла в метрах
         self.damages = {                        # словарь для учета повреждения для первого и второго весла
@@ -80,7 +86,7 @@ class Oars:
                   и параметры в допустимых пределах
         """
         
-        return (self.velsa_are_the_same and self.permissible_weight()\
+        return (self.velsa_are_the_same() and self.permissible_weight()\
         and self.oars_of_suitable_length() and not self.has_critical_damages())
 
                     
@@ -88,7 +94,8 @@ class Oars:
 
 
 a=Oars(2,2,1,1)
-a.add_damage("oar1","blade",3)
+print(a.oars_are_suitable())
+
 
             
     
